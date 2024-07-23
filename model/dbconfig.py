@@ -21,12 +21,13 @@ class DBConfig:
         pool_size = 5 if pool_size_str is None else int(pool_size_str)
 
         self.pool = MySQLConnectionPool(
+            pool_name="mypool",
             pool_size=pool_size,
             host=os.getenv("DB_HOST"),
             database=os.getenv("DB_NAME"),
             user=os.getenv("DB_USER"),
             password=os.getenv("DB_PASSWORD"),
-            port=3306
+            port=os.getenv('RDS_PORT', 3306)
         )
 
     def close_connection_pool(self):
