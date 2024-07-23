@@ -2,7 +2,6 @@ from mysql.connector.pooling import MySQLConnectionPool
 from mysql.connector import Error
 import os
 from dotenv import load_dotenv
-import redis
 
 load_dotenv()
 
