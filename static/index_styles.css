@@ -35,10 +35,9 @@
 
 .form__input {
     width: 500px;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .form__input--file {
@@ -77,6 +76,12 @@ img{
 }
 
 .pic-size {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 600px) {
+    .form__input {
+        width: 300px;
+    }
 }
